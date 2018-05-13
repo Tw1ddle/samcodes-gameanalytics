@@ -2,12 +2,12 @@
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-gameanalytics/blob/master/LICENSE)
 
-Unofficial asynchronous HTTP/HTTPS GameAnalytics REST API support for Haxe OpenFL targets. Run the demo [here](https://github.com/Tw1ddle/samcodes-gameanalytics-demo).
+Unofficial asynchronous GameAnalytics REST API support for Haxe OpenFL targets. See the demo [here](https://github.com/Tw1ddle/samcodes-gameanalytics-demo).
 
 ## Features
 
 * Work with the GameAnalytics REST API using Haxe.
-* Post events asynchronously on supported targets.
+* Post events asynchronously on most supported targets.
 
 If there is something you would like adding let me know. Pull requests welcomed too.
 

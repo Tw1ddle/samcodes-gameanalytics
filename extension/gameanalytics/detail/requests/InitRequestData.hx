@@ -1,6 +1,6 @@
 package extension.gameanalytics.detail.requests;
 
-typedef InitRequest = {
+typedef InitRequestData = {
 	var platform:String;
 	var os_version:String;
 	var sdk_version:String;

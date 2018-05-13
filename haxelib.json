@@ -2,7 +2,7 @@
 	"name": "samcodes-gameanalytics",
 	"url": "http://samcodes.co.uk/code/",
 	"license": "MIT",
-	"tags": ["analytics","openfl","android","ios","javascript","html5"],
+	"tags": ["analytics","openfl","android","ios","javascript","html5","neko","flash","desktop"],
 	"description": "Unofficial OpenFL support for the GameAnalytics REST API",
 	"version": "1.0.0",
 	"releasenote": "Initial release",

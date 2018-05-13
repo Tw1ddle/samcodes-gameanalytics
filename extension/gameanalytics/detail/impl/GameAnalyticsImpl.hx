@@ -3,9 +3,12 @@ package extension.gameanalytics.detail.impl;
 import com.akifox.asynchttp.HttpResponse;
 import extension.gameanalytics.GameAnalyticsListener;
 import extension.gameanalytics.GameAnalyticsSettings;
+import extension.gameanalytics.detail.requests.InitRequestData;
 import extension.gameanalytics.detail.requests.RequestFactory;
 import extension.gameanalytics.detail.routes.Routes;
 import extension.gameanalytics.detail.storage.IDataStorage;
+import extension.gameanalytics.detail.version.Version;
+import haxe.Json;
 
 /**
    Cross-platform backend implementation for handling recording of analytics events, storage,
@@ -17,12 +20,8 @@ class GameAnalyticsImpl {
 	
 	private var storage:IDataStorage;
 	
-	private var initRoute(get, never):String;
-	private var eventsRoute(get, never):String;
-	
-	public static inline var SDK_VERSION:String = "rest api v2";
-	public static inline var API_VERSION_NUMBER:Int = 2;
-	public static inline var API_VERSION:String = "v2";
+	private var initUrl(get, never):String;
+	private var eventsUrl(get, never):String;
 	
 	public var instanceEventIdCounter(default, null):Int = 0;
 	
@@ -32,9 +31,17 @@ class GameAnalyticsImpl {
 	}
 	
 	public function startSession():Void {
-		var request = RequestFactory.makeRequest(initRoute, "todo_testing", settings.secretKey, settings.compression, onStartSessionResponse);
+		var initRequestData:InitRequestData = { platform : "ios", os_version: "ios 8.2", sdk_version: Version.SDK_VERSION };
+		var request = RequestFactory.makeRequest(initUrl, Json.stringify(initRequestData), settings.secretKey, settings.compression, onStartSessionSucceeded, onStartSessionFailed);
 		
 		trace(request.toString());
+		trace(request.content);
+		trace(request.contentType);
+		trace(request.method);
+		trace(request.url);
+		trace(request.finalised);
+		trace(request.contentIsBinary);
+		trace(request.headers);
 		
 		request.send();
 	}
@@ -47,17 +54,23 @@ class GameAnalyticsImpl {
 		
 	}
 	
-	private function get_initRoute():String {
-		return Routes.makeInitRoute(settings.protocol, settings.endpoint, settings.gameKey);
+	private function get_initUrl():String {
+		return Routes.makeInitUrl(settings.protocol, settings.host, settings.gameKey);
 	}
 	
-	private function get_eventsRoute():String {
-		return Routes.makeEventsRoute(settings.protocol, settings.endpoint, settings.gameKey);
+	private function get_eventsUrl():String {
+		return Routes.makeEventsUrl(settings.protocol, settings.host, settings.gameKey);
 	}
 	
-	private function onStartSessionResponse(response:HttpResponse):Void {
+	private function onStartSessionSucceeded(response:HttpResponse):Void {
 		var error = response.error; // TODO handle response
 		
 		trace(response);
+		trace(response.headers.toString());
+	}
+	
+	private function onStartSessionFailed(response:HttpResponse):Void {
+		trace(response);
+		trace(response.headers.toString());
 	}
 }

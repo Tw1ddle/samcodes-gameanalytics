@@ -6,7 +6,7 @@ package extension.gameanalytics;
 typedef GameAnalyticsSettings = {
 	var gameKey:String;
 	var secretKey:String;
-	var endpoint:String;
+	var host:String;
 	var compression:GameAnalyticsCompressionOption;
 	var protocol:GameAnalyticsProtocolOption;
 }

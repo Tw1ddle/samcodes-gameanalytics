@@ -1,6 +1,6 @@
 package extension.gameanalytics.detail.requests;
 
-typedef InitResponse = {
+typedef InitResponseData = {
 	var enabled:Bool;
 	var server_ts:Int;
 	
