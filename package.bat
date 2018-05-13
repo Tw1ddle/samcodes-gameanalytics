@@ -1,0 +1,1 @@
+zip -0r samcodes-gameanalytics.zip dependencies extension haxelib.json include.xml README.md CHANGELOG.md LICENSE
