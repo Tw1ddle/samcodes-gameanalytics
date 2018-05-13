@@ -35,4 +35,4 @@ The demo app:
 ![Screenshot of demo app](https://github.com/Tw1ddle/samcodes-analytics-demo/blob/master/screenshots/analytics-demo.png?raw=true "Analytics Demo")
 
 ## Notes
-This haxelib uses the [akifox-asynchttp](https://github.com/byrobingames/localnotifications) extension for asynchronous HTTP/HTTPS support on supported targets.
+This haxelib uses the [akifox-asynchttp](https://github.com/yupswing/akifox-asynchttp) extension for asynchronous HTTP/HTTPS support on supported targets.
