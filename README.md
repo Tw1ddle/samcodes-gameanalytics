@@ -6,8 +6,8 @@ Unofficial asynchronous HTTP/HTTPS GameAnalytics REST API support for Haxe OpenF
 
 ## Features
 
-* Work with the GameAnalytics Collector REST API from Haxe.
-* Post events asynchronously on supported platforms.
+* Work with the GameAnalytics Collector REST API using Haxe.
+* Post events asynchronously on supported targets.
 
 If there is something you would like adding let me know. Pull requests welcomed too.
 
