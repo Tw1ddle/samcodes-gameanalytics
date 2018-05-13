@@ -28,9 +28,7 @@ Include the haxelib through Project.xml:
 
 ## Example
 
-See the [demo app](https://github.com/Tw1ddle/samcodes-gameanalytics-demo) for a complete example.
-
-The demo app:
+See the [demo app](https://github.com/Tw1ddle/samcodes-gameanalytics-demo) for a complete example:
 
 ![Screenshot of demo app](https://github.com/Tw1ddle/samcodes-gameanalytics-demo/blob/master/screenshots/analytics-demo.png?raw=true "Analytics Demo")
 
