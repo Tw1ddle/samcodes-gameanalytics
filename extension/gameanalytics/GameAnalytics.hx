@@ -1,10 +1,10 @@
 package extension.gameanalytics;
 
 import extension.gameanalytics.detail.impl.GameAnalyticsImpl;
-import haxe.ds.StringMap;
+import extension.gameanalytics.detail.events.ErrorEventType;
 
 /**
-   The GameAnalytics class encapsulates a solution for recording and posting analytics events to the GameAnalytics servers.
+   The GameAnalytics class encapsulates a solution that records and sends analytics events to the GameAnalytics servers.
 **/
 class GameAnalytics {
 	private var impl:GameAnalyticsImpl;
@@ -13,51 +13,39 @@ class GameAnalytics {
 		impl = new GameAnalyticsImpl(settings, listener);
 	}
 	
-	public function startSession():Void {
-		impl.startSession();
+	public function init():Void {
+		impl.init();
 	}
 	
-	public function endSession():Void {
-		impl.endSession();
+	public function recordStartSessionEvent():Void {
+		impl.recordStartSessionEvent();
+	}
+	
+	public function recordEndSessionEvent():Void {
+		impl.recordEndSessionEvent();
+	}
+	
+	public function recordBusinessEvent(eventId:String, amount:Int, currency:String, transactionNumber:Int, ?cartType:String, ?receiptInfo:{ store:String, receipt:String, signature:String }):Void {
+		impl.recordBusinessEvent(eventId, amount, currency, transactionNumber, cartType, receiptInfo);
+	}
+	
+	public function recordDesignEvent(eventId:String, ?value:Float):Void {
+		impl.recordDesignEvent(eventId, value);
+	}
+	
+	public function recordErrorEvent(severity:ErrorEventType, message:String):Void {
+		impl.recordErrorEvent(severity, message);
+	}
+	
+	public function recordProgressionEvent(eventId:String, ?attemptNumber:Int, ?score:Int):Void {
+		impl.recordProgressionEvent(eventId, attemptNumber, score);
+	}
+	
+	public function recordResourceEvent(eventId:String, amount:Float):Void {
+		impl.recordResourceEvent(eventId, amount);
 	}
 	
 	public function postEvents():Void {
 		impl.postEvents();
-	}
-	
-	public function addGlobalAttribute(attributeName:String, value:String):Void {
-		
-	}
-	
-	public function addGlobalAttributeForEventType(eventType:String, attributeName:String, value:String):Void {
-		
-	}
-	
-	public function removeGlobalAttribute(attributeName:String):Void {
-		
-	}
-	
-	public function removeGlobalAttributeForEventType(eventType:String, attributeName:String):Void {
-		
-	}
-	
-	public function addGlobalMetric(metricName:String, value:Float):Void {
-		
-	}
-	
-	public function addGlobalMetricForEventType(eventType:String, metricName:String, value:Float):Void {
-		
-	}
-	
-	public function removeGlobalMetric(metricName:String):Void {
-		
-	}
-	
-	public function removeGlobalMetricForEventType(eventType:String, metricName:String):Void {
-		
-	}
-	
-	public function recordEvent(eventType:String, ?attributes:StringMap<String>, ?metrics:Map<String, Float>):Void {
-		
 	}
 }

@@ -8,8 +8,9 @@ import extension.gameanalytics.detail.events.DefaultAnnotations;
 typedef ProgressionEvent = {
 	> DefaultAnnotations,
 	
-	var event_id:String,
+	var category:EventCategory;
+	var event_id:String;
 	
-	@:optional var attempt_num:Int,
-	@:optional var score:Int
+	@:optional var attempt_num:Int;
+	@:optional var score:Int;
 }

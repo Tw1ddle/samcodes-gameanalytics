@@ -9,4 +9,5 @@ typedef GameAnalyticsSettings = {
 	var host:String;
 	var compression:GameAnalyticsCompressionOption;
 	var protocol:GameAnalyticsProtocolOption;
+	var maxCachedEventCount:Int;
 }

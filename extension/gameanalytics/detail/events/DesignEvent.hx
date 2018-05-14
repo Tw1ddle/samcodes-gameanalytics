@@ -8,7 +8,8 @@ import extension.gameanalytics.detail.events.DefaultAnnotations;
 typedef DesignEvent = {
 	> DefaultAnnotations,
 	
-	var event_id:String,
+	var category:EventCategory;
+	var event_id:String;
 	
-	@:optional var value:Float
+	@:optional var value:Float;
 }

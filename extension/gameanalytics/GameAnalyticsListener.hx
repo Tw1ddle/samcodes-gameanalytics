@@ -1,35 +1,37 @@
 package extension.gameanalytics;
 
+import extension.gameanalytics.detail.requests.InitResponseData;
+
 /**
-   Listener class that you can subclass to add custom code to react to SDK events.
-   Note that you will still want to call the base class methods after subclassing.
+   Listener class that can be subclassed to add custom code to react to SDK events.
+   Note that you should call these base class methods after subclassing.
 **/
 class GameAnalyticsListener {
 	public function new() {
 		
 	}
 	
-	public function onStartedSession():Void {
+	public function onInitRequested():Void {
 		
 	}
 	
-	public function onFailedToStartSession():Void {
+	public function onInitSucceeded(response:InitResponseData):Void {
 		
 	}
 	
-	public function onEndedSession():Void {
+	public function onInitFailed(httpResponseCode:Int):Void {
 		
 	}
 	
-	public function onFailedToEndSession():Void {
+	public function onPostEventsRequested():Void {
 		
 	}
 	
-	public function onReportedEvents():Void {
+	public function onPostEventsSucceeded():Void {
 		
 	}
 	
-	public function onFailedToReportEvents():Void {
+	public function onPostEventsFailed(httpResponseCode:Int):Void {
 		
 	}
 }

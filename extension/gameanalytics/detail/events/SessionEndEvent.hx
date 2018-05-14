@@ -8,5 +8,6 @@ import extension.gameanalytics.detail.events.DefaultAnnotations;
 typedef SessionEndEvent = {
 	> DefaultAnnotations,
 	
-	var length:Int
+	var category:EventCategory;
+	var length:Int;
 }

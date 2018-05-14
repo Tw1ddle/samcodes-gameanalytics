@@ -8,11 +8,12 @@ import extension.gameanalytics.detail.events.DefaultAnnotations;
 typedef BusinessEvent = {
 	> DefaultAnnotations,
 	
-	var event_id:String,
-	var amount:Int,
-	var currency:String,
-	var transaction_num:Int,
+	var category:EventCategory;
+	var event_id:String;
+	var amount:Int;
+	var currency:String;
+	var transaction_num:Int;
 	
-	@:optional var cart_type:String,
-	@:optional var receipt_info:{ store:String, receipt:String, signature:String }
+	@:optional var cart_type:String;
+	@:optional var receipt_info:{ store:String, receipt:String, signature:String };
 }

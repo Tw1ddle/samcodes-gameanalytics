@@ -1,4 +1,4 @@
-package extension.gameanalytics.detail.collectors;
+package extension.gameanalytics.detail.endpoints;
 
 /**
    Production host for GameAnalytics

@@ -2,6 +2,6 @@
 <project>
 	<haxelib name="openfl" />
 	
-	<!-- Note the haxelib could be included here instead -->
+	<source path="dependencies/hxPako/src" />
 	<source path="dependencies/akifox-asynchttp" />
 </project>

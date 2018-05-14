@@ -8,6 +8,7 @@ import extension.gameanalytics.detail.events.DefaultAnnotations;
 typedef ErrorEvent = {
 	> DefaultAnnotations,
 	
-	var severity:ErrorEventType,
-	var message:String
+	var category:EventCategory;
+	var severity:ErrorEventType;
+	var message:String;
 }

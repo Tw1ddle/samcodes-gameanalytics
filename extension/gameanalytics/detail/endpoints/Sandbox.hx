@@ -1,4 +1,4 @@
-package extension.gameanalytics.detail.collectors;
+package extension.gameanalytics.detail.endpoints;
 
 /**
    Sandbox keys and host for the GameAnalytics sandbox
