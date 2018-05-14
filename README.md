@@ -2,7 +2,9 @@
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/Tw1ddle/samcodes-gameanalytics/blob/master/LICENSE)
 
-Unofficial cross-platform GameAnalytics REST API support for Haxe OpenFL targets. Mostly working - but has a few outstanding issues. See the demo code [here](https://github.com/Tw1ddle/samcodes-gameanalytics-demo), and run it in your browser [here](http://tw1ddle.github.io/samcodes-gameanalytics-demo/index.html).
+Unofficial cross-platform GameAnalytics REST API support for Haxe OpenFL targets. Almost working - but some issues in dependencies have caused me to shelve the project.
+
+See the demo code [here](https://github.com/Tw1ddle/samcodes-gameanalytics-demo), and run it in your browser [here](http://tw1ddle.github.io/samcodes-gameanalytics-demo/index.html).
 
 ## Features
 
