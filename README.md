@@ -15,15 +15,14 @@ If there is something you would like adding let me know. Pull requests welcomed 
 
 ## Known Issues
 
-Submitting events to the GameAnalytics servers results in HTTP 500 error responses - needs some work.
+As of Haxe 3.4.7, OpenFL 8.0.1 there are some blocking issues to fix:
 
-HTTP connections work fine on all targets, but HTTPS doesn't seem to work at all for me, not sure why.
+ * Submitting events to the GameAnalytics servers results in HTTP 500 error responses. That needs some work.
+ * Connecting to the GameAnalytics servers work fine via HTTP on all targets, but HTTPS doesn't seem to work at all, not sure why.
+ * Using gzip compression results in HTTP 401 authorization errors, not sure why. I have tried both hxPako Gzip and lime.util.compress.Gzip compression, same result with gzip deflate methods.
+ * Support on iOS reportedly has issues due to Haxe problems: https://github.com/yupswing/akifox-asynchttp/issues/27
 
-Using gzip compression results in HTTP 401 authorization errors, not sure why. I have tried both hxPako and lime.compress, same result with gzip deflate methods.
-
-Support on iOS reportedly has issues due to Haxe problems: https://github.com/yupswing/akifox-asynchttp/issues/27
-
-This hasn't had any use in a commercial app yet. Use with caution!
+Note this hasn't seen much testing or any use in a commercial app yet. Use with caution!
 
 ## Usage
 
